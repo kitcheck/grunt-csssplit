@@ -55,7 +55,7 @@ describe('splitter module', function () {
       });
 
       it('takes two parameters', function () {
-        expect(instance.split).to.have.length(2);
+        expect(instance.split).to.have.length(3);
       });
 
       it('calls the _parseCSS function with the css parameter', function () {
@@ -121,7 +121,7 @@ describe('splitter module', function () {
       });
 
       it('takes two arguments', function () {
-        expect(instance._splitCSS).to.have.length(2);
+        expect(instance._splitCSS).to.have.length(3);
       });
 
       /*

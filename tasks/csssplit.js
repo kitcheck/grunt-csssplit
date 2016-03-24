@@ -47,7 +47,7 @@ module.exports = function(grunt) {
     function cssFileToPages(options, filePath) {
         return {
             original: path.basename(filePath),
-            pages: checkPageCount(splitter.split(grunt.file.read(filePath), options.maxSelectors), options, filePath)
+            pages: checkPageCount(splitter.split(grunt.file.read(filePath), options.maxSelectors, options.compress), options, filePath)
         };
     }
 
@@ -104,7 +104,8 @@ module.exports = function(grunt) {
         var options = this.options({
           suffix: '_part_',
           maxSelectors: 4095,
-          maxPages: false
+          maxPages: false,
+          compress: false
         });
 
         // Iterate over all specified file groups.
